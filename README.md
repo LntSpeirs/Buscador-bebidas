@@ -4,3 +4,4 @@
 - React-bootstrap
 - API de bebidas: https://www.thecocktaildb.com/
 - Consultas con AXIOS
+- Modales dinamicos con react

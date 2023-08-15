@@ -1,7 +1,9 @@
 import { Button, Card, Col } from "react-bootstrap";
+import useBebidas from "../hooks/useBebidas";
 
 /* eslint-disable react/prop-types */
 const Bebida = ({ bebida }) => {
+  const { handleModalClick, handleBebidaIdClick } = useBebidas();
   return (
     <Col md={6} lg={3}>
       <Card className="mb-4">
@@ -12,7 +14,14 @@ const Bebida = ({ bebida }) => {
         />
         <Card.Body>
           <Card.Title>{bebida.strDrink}</Card.Title>
-          <Button variant="warning" className="w-100 mt-2 text-uppercase">
+          <Button
+            variant="warning"
+            className="w-100 mt-2 text-uppercase"
+            onClick={() => {
+              handleModalClick();
+              handleBebidaIdClick(bebida.idDrink);
+            }}
+          >
             Ver receta
           </Button>
         </Card.Body>

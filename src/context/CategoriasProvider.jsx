@@ -20,7 +20,6 @@ const CategoriasProvider = ({ children }) => {
 
   useEffect(() => {
     obtenerCategorias();
-    console.log(categorias);
   }, []);
   return (
     <CategoriasContext.Provider value={{ categorias }}>
